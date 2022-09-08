@@ -7,11 +7,11 @@ export interface IMlNavBar {
 }
 
 const MlNavBar: React.FC<IMlNavBar> = ({navigationRoutes}) => {
-  const mappedRoutes = navigationRoutes.map((route) => {
+  const mappedRoutes = navigationRoutes ? navigationRoutes.map((route) => {
     return (
       <a key={route.path} className="block lg:inline-block p-4 text-center">{route.title}</a>
     )
-  });
+  }) : null;
 
   const [showNav, setShowNav] = useState(false); 
 

@@ -1,7 +1,7 @@
 import { IAtInput } from './AtInput';
 
 const base: IAtInput = {
-  sampleTextProp: 'Hello world!',
+  inputLabel: "Helloworld",
 };
 
 export const mockAtInputProps = {

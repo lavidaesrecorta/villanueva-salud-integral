@@ -1,7 +1,7 @@
 export interface IAtButton {
-    sampleTextProp: string;
-    sizeClasses: string;
+    buttonLabel: string;
     buttonStyle?: keyof typeof ButtonStyles;
+    sizeClasses?: string;
     
 }
 
@@ -10,9 +10,9 @@ enum ButtonStyles {
   SMALL = 'bg-purple-500',
 }
 
-const AtButton: React.FC<IAtButton> = ({sampleTextProp, sizeClasses, buttonStyle}) => {
+const AtButton: React.FC<IAtButton> = ({buttonLabel, sizeClasses, buttonStyle}) => {
   return (
-  <button className={`${buttonStyle ? ButtonStyles[buttonStyle] : ButtonStyles.DEFAULT_PRIMARY} ${sizeClasses}`}>{sampleTextProp}</button>
+  <button className={`${buttonStyle ? ButtonStyles[buttonStyle] : ButtonStyles.DEFAULT_PRIMARY} ${sizeClasses}`}>{buttonLabel}</button>
   );
 };
 

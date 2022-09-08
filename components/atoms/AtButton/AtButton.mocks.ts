@@ -1,7 +1,7 @@
 import { IAtButton } from './AtButton';
 
 const base: IAtButton = {
-  sampleTextProp: 'Hello world!',
+  buttonLabel: "Hola!",
 };
 
 export const mockAtButtonProps = {

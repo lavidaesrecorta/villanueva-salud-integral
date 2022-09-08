@@ -12,11 +12,11 @@ export interface IOrFooter {
 }
 
 const OrFooter: React.FC<IOrFooter> = ({navigationRoutes,subscribeWidget}) => {
-  const mappedRoutes = navigationRoutes.map((route) => {
+  const mappedRoutes = navigationRoutes ? navigationRoutes.map((route) => {
     return (
       <a key={route.path} className="block lg:inline-block p-4 text-center">{route.title}</a>
     )
-  });
+  }) : null;
 
   return (
     <div className="bg-primary">

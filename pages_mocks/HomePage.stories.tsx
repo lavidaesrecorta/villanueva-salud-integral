@@ -1,6 +1,7 @@
 import { ComponentMeta, ComponentStory } from "@storybook/react";
 import { mockHomePageProps } from "./HomePage.mocks";
-import HomePage, { IHomePage } from "./HomePage";
+import HomePage,{IHomePage } from '../pages/templates/HomePage';
+
 export default {
     title: 'Pages/HomePage',
     component: HomePage,

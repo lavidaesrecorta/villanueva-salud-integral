@@ -20,7 +20,8 @@ const HomePage: React.FC<IHomePage> = ({navBar,banner,blocks, footer}) => {
   <div>
     <MlNavBar {...navBar}/>
     <MlBanner {...banner}/>
-    {blocks.map((block,index) => {switch (block.type) {
+
+    { !!blocks ? blocks.map((block,index) => {switch (block.type) {
         case AvailableFeatures.BIOGRAPHY:
           return (<OrBiography {...(block as IOrBiography)} />);   
         case AvailableFeatures.FEATURE_LIST:
@@ -30,7 +31,8 @@ const HomePage: React.FC<IHomePage> = ({navBar,banner,blocks, footer}) => {
         default:
           break;
       }
-    } )}
+    } ) 
+    : null}
     <OrFooter {...footer}/>
   </div>
   );

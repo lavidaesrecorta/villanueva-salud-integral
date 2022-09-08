@@ -1,6 +1,6 @@
-import { IHomePage } from './HomePage';
-import { mockOrFeaturesBlockProps } from '../../components/organisms/OrFeatures/OrFeaturesBlock.mocks';
-import { mockOrFooterProps } from '../../components/organisms/OrFooter/OrFooter.mocks';
+import { IHomePage } from '../pages/templates/HomePage';
+import { mockOrFeaturesBlockProps } from '../components/organisms/OrFeatures/OrFeaturesBlock.mocks';
+import { mockOrFooterProps } from '../components/organisms/OrFooter/OrFooter.mocks';
 const base: IHomePage = {
   navBar: {
     navigationRoutes: [
