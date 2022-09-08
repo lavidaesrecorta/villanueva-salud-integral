@@ -12,6 +12,14 @@ module.exports = {
       lg: '1200px',
       xl: '1536px',
     },
+    extend: {
+      colors: {
+        'primary': '#51315e',
+        'primary-light': '#efe5f0',
+        'secondary': '#C673A2',
+        'tertiary-light': '#e7d8e9',
+      }
+    },
   },
   plugins: [],
 }
