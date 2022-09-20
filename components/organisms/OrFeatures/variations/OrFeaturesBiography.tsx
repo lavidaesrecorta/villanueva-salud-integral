@@ -9,7 +9,7 @@ export interface IOrBiography extends IOrFeaturesBlock{
 
 const OrBiography: React.FC<IOrBiography> = ({blockTitle,biographyBody,bioImageSource}) => {
   return (
-    <div className="flex flex-col md:flex-row justify-items-center items-center bg-purple-300 h-96">
+    <div className="flex flex-col md:flex-row justify-items-center items-center bg-purple-300 h-fit lg:h-96">
         <div className="h-96 w-full md:h-full md:w-5/12 bg-secondary">
         <div className="relative h-full z-0">
         <Image className="fixed" src={bioImageSource} alt="Flores" layout="fill" objectFit="cover" />

@@ -26,8 +26,11 @@ const featuresList: IOrFeaturesList = {
 const biography: IOrBiography = {
   type: AvailableFeatures.BIOGRAPHY,
   blockTitle: '¡Hola! Soy Andrea.',
-  biographyBody: 'Me llamo Andrea Villanueva, soy madre y terapeuta. Me dedico a la terapia floral y otras terapias naturales. Trabajaba con los cops.',
-  bioImageSource: './andreabio2.jpg',
+  biographyBody: `Me llamo Andrea Villanueva, soy madre y terapeuta. Me dedico a la terapia floral y otras terapias naturales. Trabajaba con los cops. 
+  La idea de esta página es que veas el diseño, colores, texto, qué podrías necesitar en el futuro, que otras cosas podríamos mostrar.
+  No funciona ningún botón porque quería hacer el diseño y ver que cosas realmente necesitas, podríamos ver algo de agendar hora y un blog, pero algunas cosas pueden costar plata :(.
+  Mi idea es que después se puede integrar algo para que cambies las fotos y el texto sin neesitar de mi ayuda, pero esa es la razón por la que no he agregado la funcionalidad ni todo lo demás.`,
+  bioImageSource: '/andreabio3.jpg',
 };
 
 const callToAction: IOrCallToAction = {
