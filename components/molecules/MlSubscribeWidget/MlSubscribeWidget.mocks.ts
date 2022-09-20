@@ -4,10 +4,11 @@ import { IMlSubscribeWidget } from './MlSubscribeWidget';
 const base: IMlSubscribeWidget = {
   widgetTitle: 'Subscríbete',
   socialMediaIcons: [
-    mockMlLinkProps.base,
-    mockMlLinkProps.base,
-    mockMlLinkProps.base,
+    mockMlLinkProps.facebook,
+    mockMlLinkProps.instagram,
+    mockMlLinkProps.whatsapp,
   ],
+  inputLabel: 'Ingresa tu correo',
 };
 
 export const mockMlSubscribeWidgetProps = {

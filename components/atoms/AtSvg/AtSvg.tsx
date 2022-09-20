@@ -7,20 +7,20 @@ import { Interweave } from "interweave";
 
 export interface IAtSvg {
     sizeClass: string;
-    svgBase64Data: string;
+    src: string;
 }
 
 const DecodeImage = (imageBase64: string) => {
   return Buffer.from(imageBase64,'base64').toString('ascii');
 }
 
-const AtSvg: React.FC<IAtSvg> = ({sizeClass,svgBase64Data}) => {
+const AtSvg: React.FC<IAtSvg> = ({sizeClass,src}) => {
   return (
     <div className={`relative ${sizeClass}`}>
       <Image
         unoptimized
         alt='Social Media'
-        src={`data:image/svg+xml;base64,${svgBase64Data}`}
+        src={`${src}`}
         layout='fill'
         objectFit='cover'
       />

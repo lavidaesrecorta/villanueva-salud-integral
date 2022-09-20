@@ -5,11 +5,12 @@ import MlLink, { IMlLink } from "../MlLink/MlLink";
 export interface IMlSubscribeWidget {
     widgetTitle: string;
     socialMediaIcons: IMlLink[];
+    inputLabel: string;
 }
 
 
 
-const MlSubscribeWidget: React.FC<IMlSubscribeWidget> = ({widgetTitle,socialMediaIcons}) => {
+const MlSubscribeWidget: React.FC<IMlSubscribeWidget> = ({widgetTitle,socialMediaIcons, inputLabel}) => {
   const mappedSocialMediaIcons = socialMediaIcons ? socialMediaIcons.map((icon, index) => {
     return (
       <MlLink key={index} {...icon} />
@@ -21,11 +22,11 @@ const MlSubscribeWidget: React.FC<IMlSubscribeWidget> = ({widgetTitle,socialMedi
         <div className='p-4'>
           <h1 className='text-xl pb-2'>{widgetTitle}</h1>
           <div className=''>
-            <AtInput sizeClasses='w-full h-9 my-1' />
+            <AtInput inputLabel={inputLabel} sizeClasses='w-full h-9 my-1' />
             <AtButton sizeClasses='w-full h-9 my-1' buttonLabel='Subscribirse' buttonStyle='SMALL'/>
           </div>
         </div>
-        <div className='flex justify-center px-6'>
+        <div className='flex justify-center px-6 py-2'>
           {mappedSocialMediaIcons}
         </div>
       </div>

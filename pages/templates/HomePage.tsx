@@ -23,11 +23,11 @@ const HomePage: React.FC<IHomePage> = ({navBar,banner,blocks, footer}) => {
 
     { !!blocks ? blocks.map((block,index) => {switch (block.type) {
         case AvailableFeatures.BIOGRAPHY:
-          return (<OrBiography {...(block as IOrBiography)} />);   
+          return (<OrBiography key={index} {...(block as IOrBiography)} />);   
         case AvailableFeatures.FEATURE_LIST:
-          return (<OrFeaturesList {...(block as IOrFeaturesList)} />)   ;
+          return (<OrFeaturesList key={index} {...(block as IOrFeaturesList)} />)   ;
         case AvailableFeatures.CALL_TO_ACTION:
-          return (<OrFeaturesCallToAction {...(block as IOrCallToAction)} />)  
+          return (<OrFeaturesCallToAction key={index} {...(block as IOrCallToAction)} />)  
         default:
           break;
       }

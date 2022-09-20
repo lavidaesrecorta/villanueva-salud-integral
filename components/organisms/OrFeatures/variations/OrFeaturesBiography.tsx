@@ -4,14 +4,15 @@ import Image from "next/image";
 
 export interface IOrBiography extends IOrFeaturesBlock{
   biographyBody?: string,
+  bioImageSource: string,
 }
 
-const OrBiography: React.FC<IOrBiography> = ({blockTitle,biographyBody}) => {
+const OrBiography: React.FC<IOrBiography> = ({blockTitle,biographyBody,bioImageSource}) => {
   return (
     <div className="flex flex-col md:flex-row justify-items-center items-center bg-purple-300 h-96">
         <div className="h-96 w-full md:h-full md:w-5/12 bg-secondary">
         <div className="relative h-full z-0">
-        <Image className="fixed" src="/andreabio.jpg" alt="Flores" layout="fill" objectFit="cover" />
+        <Image className="fixed" src={bioImageSource} alt="Flores" layout="fill" objectFit="cover" />
         </div>
         </div>
         <div className="w-full h-full md:w-7/12 bg-primary-light px-4 py-8 md:p-12">

@@ -3,10 +3,16 @@ import { mockMlSubscribeWidgetProps } from '../../molecules/MlSubscribeWidget/Ml
 import { IOrFooter } from './OrFooter';
 
 const base: IOrFooter = {
-  navigationRoutes: [
-    {title:"Inicio", path:"/"},
-    {title:"Agendar hora", path:"/consultas"},
-  ],
+  navigationRoutes: [{
+      title:"Inicio",
+      path:"/",
+      subroutes:[
+        {title:"¿Quiénes somos?", path:"/"},
+        {title:"Tratamientos", path:"/"}
+
+      ]},
+    // {title:"Agendar hora", path:"/consultas"},
+    ],
   subscribeWidget: mockMlSubscribeWidgetProps.base
 };
 

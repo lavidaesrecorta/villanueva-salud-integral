@@ -5,16 +5,17 @@ import AtInput from '../../atoms/AtInput/AtInput';
 import AtButton from '../../atoms/AtButton/AtButton';
 import MlLink, { IMlLink } from '../../molecules/MlLink/MlLink';
 import MlSubscribeWidget, { IMlSubscribeWidget } from '../../molecules/MlSubscribeWidget/MlSubscribeWidget';
+import AtNavigationRoute, { IAtNavigationRoute } from '../../atoms/AtNavigationRoute/AtNavigationRoute';
 
 export interface IOrFooter {
-    navigationRoutes: {title: string, path: string}[];
+    navigationRoutes: IAtNavigationRoute[];
     subscribeWidget: IMlSubscribeWidget;
 }
 
 const OrFooter: React.FC<IOrFooter> = ({navigationRoutes,subscribeWidget}) => {
   const mappedRoutes = navigationRoutes ? navigationRoutes.map((route) => {
     return (
-      <a key={route.path} className="block lg:inline-block p-4 text-center">{route.title}</a>
+      <AtNavigationRoute key={route.path} {...route}/>
     )
   }) : null;
 

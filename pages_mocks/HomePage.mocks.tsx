@@ -5,7 +5,7 @@ const base: IHomePage = {
   navBar: {
     navigationRoutes: [
       {title:"Inicio", path:"/"},
-      {title:"Agendar hora", path:"/consultas"},
+      // {title:"Agendar hora", path:"/consultas"},
     ],},
     banner: {
       sampleTextProp: "Bro momento"
