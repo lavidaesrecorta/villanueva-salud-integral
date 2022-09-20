@@ -1,6 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-}
-
-module.exports = nextConfig
+const path = require('path')
+const withOptimizedImages = require('next-optimized-images');
+module.exports = {images: {
+  loader: 'akamai',
+  path: '',
+},
+};
