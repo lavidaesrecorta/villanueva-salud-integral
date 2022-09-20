@@ -1,5 +1,5 @@
-import OrBiography from "./variations/OrFeaturesBiography";
-import OrFeaturesList from "./variations/OrFeaturesList";
+import OrBiography, { IOrBiography } from "./variations/OrFeaturesBiography";
+import OrFeaturesList, { IOrFeaturesList } from "./variations/OrFeaturesList";
 import { AvailableFeatures, FeatureTypes } from "./featureTypes";
 import { IBlock } from "../../typeLibrary/Block";
 import OrFeaturesCallToAction, { IOrCallToAction } from "./variations/OrFeaturesCallToAction";
@@ -12,9 +12,9 @@ export interface IOrFeaturesBlock extends IBlock {
 const OrFeaturesBlock: React.FC<IOrFeaturesBlock> = (props) => {
   switch (props.type) {
     case AvailableFeatures.BIOGRAPHY:
-      return <OrBiography {...props} />;
+      return <OrBiography {...props as IOrBiography} />;
     case AvailableFeatures.FEATURE_LIST:
-      return <OrFeaturesList {...props} />;
+      return <OrFeaturesList {...props as IOrFeaturesList} />;
     case AvailableFeatures.CALL_TO_ACTION:
       return <OrFeaturesCallToAction {...(props as IOrCallToAction)} />
     default:
